@@ -1,44 +1,43 @@
 import React from 'react';
 
-const Header = () => {
-  return (
-    <header>
-      <h1>Simple Counter</h1>
-    </header>
-  )
+class Header extends React.Component {
+  render(){
+    return (
+      <header>
+        <h1>Luke's Very Simple Counter</h1>
+      </header>
+    )
+    }  
 }
 
-class Main extends React.Component {
+class Counter extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      words: 'nothing to see here'
+      count: 0,
     }
   }
 
-  handleWord = e => {
-    let words = e.target.value;
-    this.setState({ words });
+  handlePlus = e => {
+    e.preventDefault();
+    let count = this.state.count + 1;
+    this.setState({ count });
   }
 
-  handleClick = e => {
+  handleMinus = e => {
     e.preventDefault();
-    let words = this.state.words
-      .split('')
-      .reverse()
-      .join('');
-
-    this.setState({ words });
+    let count = this.state.count - 1;
+    this.setState({ count });
   }
 
   render() {
     return (
-      <section>
-        <h3>{this.state.words}</h3>
-        <input onChange={this.handleWord} />
-        <button onClick={this.handleClick}>onClick</button>
-      </section>
+      <div>
+        <p>{this.state.count}</p>
+        <button onClick={this.handleMinus}>-</button>
+        <button onClick={this.handlePlus}>+</button>
+      </div>
     )
   }
 } 
@@ -48,7 +47,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Main />
+        <Counter />
       </React.Fragment>
     )
   }
