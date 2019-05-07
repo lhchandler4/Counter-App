@@ -1,6 +1,15 @@
 # Simple-Counter-App
 Lab 11 Simple Counter App
 
+Number and name of feature: Feature 1 Counter
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 9:00
+
+Finish time: 11:30
+
+Actual time needed to complete: 2 hours 30 minutes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
