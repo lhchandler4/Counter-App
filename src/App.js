@@ -41,7 +41,7 @@ class Counter extends React.Component {
     return (
       <div>
         <p>Number Of Clicks: {this.state.clicks}</p>
-        <p>{this.state.count}</p>
+        <p>Counter: {this.state.count}</p>
         <button onClick={this.handleMinus}>-</button>
         <button onClick={this.handlePlus}>+</button>
       </div>
